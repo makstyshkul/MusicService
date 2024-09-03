@@ -1,9 +1,8 @@
 
-
-const SongItem = ({name}) => {
+const SongItem = ({name, isActive}) => {
 
 	return(
-		<li>{name}</li>
+		<li style={isActive ? {backgroundColor: 'blue'} : null}>{name}</li>
 	)
 
 }

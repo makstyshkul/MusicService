@@ -2,17 +2,20 @@ import React from "react";
 import Library from './components/library/Library';
 import AudioPlayer from './components/audioPlayer/AudioPlayer';
 import useListController from "./hooks/useListController";
+import useMusic from "./API/useMusic";
+import {AudioListContext} from './context/AudioListContext'
 
 
 function App() {
 
-	const {currentSong, setSongByID, prevSong, nextSong} = useListController();
+	const music = useMusic();
+	const controller = useListController(music);
 
   return (
-    <div >
-      <Library currentSong={currentSong} setSongByID={setSongByID} />
-		<AudioPlayer currentSong={currentSong} prevSong={prevSong} nextSong={nextSong} />
-    </div>
+    <AudioListContext.Provider value={controller}>
+      <Library />
+		<AudioPlayer />
+    </AudioListContext.Provider>
   );
 }
 
