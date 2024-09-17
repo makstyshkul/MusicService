@@ -4,6 +4,7 @@ import AudioPlayer from './components/audioPlayer/AudioPlayer';
 import useListController from "./hooks/useListController";
 import useMusic from "./API/useMusic";
 import {AudioListContext} from './context/AudioListContext'
+import Header from './components/header/Header';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <AudioListContext.Provider value={controller}>
+      <Header />
       <Library />
 		<AudioPlayer />
     </AudioListContext.Provider>

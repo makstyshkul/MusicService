@@ -2,7 +2,7 @@
 const SongItem = ({name, isActive}) => {
 
 	return(
-		<li style={isActive ? {backgroundColor: 'blue'} : null}>{name}</li>
+		<li>{name}</li>
 	)
 
 }
