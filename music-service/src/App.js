@@ -1,23 +1,26 @@
-import React from "react";
-import Library from './components/library/Library';
-import AudioPlayer from './components/audioPlayer/AudioPlayer';
-import useListController from "./hooks/useListController";
-import useMusic from "./API/useMusic";
-import {AudioListContext} from './context/AudioListContext'
-import Header from './components/header/Header';
+import CssBaseline from '@mui/material/CssBaseline';
+import Sidebar from "./components/sidebar/Sidebar";
+import Main from "./components/main/Main";
+import WeeklyTopSongs from "./components/weeklyTop/WeeklyTopSongs";
+import NewSongs from "./components/newSongs/NewSongs";
+import TrendingSongs from "./components/trendingSongs/TrendingSongs";
+
 
 
 function App() {
-
-	const music = useMusic();
-	const controller = useListController(music);
-
   return (
-    <AudioListContext.Provider value={controller}>
-      <Header />
-      <Library />
-		<AudioPlayer />
-    </AudioListContext.Provider>
+    <>
+      <CssBaseline />
+      <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#121212'}}>
+        <Sidebar />
+        <div style={{  flex: 1 }}>
+          <Main />
+			 <WeeklyTopSongs />
+			 <NewSongs />
+			 <TrendingSongs />
+        </div>
+      </div>
+    </>
   );
 }
 

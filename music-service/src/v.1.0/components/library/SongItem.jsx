@@ -1,4 +1,3 @@
-
 const SongItem = ({name, isActive}) => {
 
 	return(

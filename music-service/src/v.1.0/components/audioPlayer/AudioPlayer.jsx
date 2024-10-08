@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import useMusic from '../../API/useMusic';
-import AudioController from "./AudioController";
+import AudioController from "./AudioController.jsx";
 import { AudioListContext } from "../../context/AudioListContext";
 
 const AudioPlayer = () => {
