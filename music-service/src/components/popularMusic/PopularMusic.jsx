@@ -1,53 +1,44 @@
 import React from 'react';
 import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import ImagineDragons from "./images/imdr.png";
-import Adele from "./images/adele.png";
-import Eminem from "./images/em.png";
-import TheNeighborhood from "./images/neigh.png";
-import Måneskin from "./images/man.png";
+import Gossip from "./images/gossip.png";
+import Soy from "./images/soy.png";
+import Sly from "./images/sly.png";
 
 
 const songs = [
   {
-    title: "Whatever It Takes",
-    artist: "Imagine Dragons",
-    cover: `${ImagineDragons}`,
-  },
-  {
-    title: "Skyfall",
-    artist: "Adele",
-    cover: `${Adele}`,
-	  },
-  {
-    title: "Superman",
-    artist: "Eminem",
-	 cover: `${Eminem}`,
-  },
-  {
-    title: "Softcore",
-    artist: "The Neighborhood",
-	 cover: `${TheNeighborhood}`,
-  },
-  {
-    title: "The Lonliest",
+	 title: "Gossip",
     artist: "Måneskin",
-	 cover: `${Måneskin}`,
+    cover: `${Gossip}`,
+	 viewers: "3M views",
   },
+  {
+	title: "Shape Of You",
+	artist: "Ed Sheeran",
+	cover: `${Soy}`,
+	viewers: "5M views",
+ },
+ {
+	title: "Someone Like You",
+	artist: "Adele",
+	cover: `${Sly}`,
+	viewers: "3M views",
+ },
 ];
 
-const WeeklyTopSongs = () => {
+const PopularMusic = () => {
   return (
-    <Box sx={{ bgcolor: '#121212', color: 'white', marginTop: '65px', marginLeft: '435px' }}>
+    <Box sx={{ bgcolor: '#121212', color: 'white', marginTop: '75px', marginLeft: '435px' }}>
       <Typography variant="h3" sx={{ fontWeight: 'bold' }}>
-        Weekly Top <span style={{ color: '#ff69b4' }}>Songs</span>
+        Music <span style={{ color: '#ff69b4' }}>Video</span>
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: '20px' }}>
 			{songs.map((song) => (
-				<Card key={song.id} sx={{ bgcolor: '#181818', height: '285px', width: '215px', display: 'flex', flexDirection: 'column', '&:not(:first-of-type)': { marginLeft: '50px' }, borderRadius: '5%' }}>
+				<Card key={song.id} sx={{ bgcolor: '#181818', height: '260px', width: '350px', display: 'flex', flexDirection: 'column', '&:not(:first-of-type)': { marginLeft: '90px' }, borderRadius: '5%', marginTop: '20px' }}>
 					<CardMedia
 					component="img"
-					height="200"
+					height="190"
 					image={song.cover} 
 					alt={song.title}
 					/>
@@ -58,10 +49,13 @@ const WeeklyTopSongs = () => {
 					<Typography variant="body2" color='#cccac6' marginTop={'5px'}>
 						{song.artist}
 					</Typography>
+					<Typography variant="body2" color='#cccac6' marginTop={'-20px'} marginLeft={'75%'}>
+						{song.viewers}
+					</Typography>
 					</CardContent>
 				</Card>
 			))}
-			<Box sx={{ display: 'flex', flexDirection: 'column', marginLeft: '25px'}}>
+			<Box sx={{ display: 'flex', flexDirection: 'column', marginLeft: '50px'}}>
 				<Card sx={{ 
 					bgcolor: '#181818', 
 					color: 'white', 
@@ -79,10 +73,9 @@ const WeeklyTopSongs = () => {
 				</Card>
 				<Typography sx={{ marginTop: '5px', marginLeft: '10px'}}>View All</Typography>
 			</Box>
-			
 			</Box>
     </Box>
   );
 };
 
-export default WeeklyTopSongs;
+export default PopularMusic;

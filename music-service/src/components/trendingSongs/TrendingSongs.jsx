@@ -52,7 +52,7 @@ const TrendingSongs = () => {
                 <TableCell sx={{ color: '#cccac6', borderBottom: 'none' }}>{song.release}</TableCell>
                 <TableCell sx={{ color: '#cccac6', borderBottom: 'none' }}>{song.album}</TableCell>
                 <TableCell sx={{ color: '#cccac6', borderBottom: 'none' }} align="right">
-                  <Box display="flex" alignItems="center">
+                  <Box display="flex" alignItems="center" marginRight={'30px'}>
                     <FavoriteIcon color="secondary" sx={{ marginRight: 1 }} />
                     {song.time}
                   </Box>

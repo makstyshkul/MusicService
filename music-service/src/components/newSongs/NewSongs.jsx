@@ -44,7 +44,7 @@ const NewSongs = () => {
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: '20px' }}>
 			{songs.map((song) => (
-				<Card key={song.id} sx={{ bgcolor: '#181818', height: '285px', width: '215px', display: 'flex', flexDirection: 'column', margin: '20px', borderRadius: '5%' }}>
+				<Card key={song.id} sx={{ bgcolor: '#181818', height: '285px', width: '215px', display: 'flex', flexDirection: 'column', '&:not(:first-of-type)': { marginLeft: '50px' } , borderRadius: '5%' }}>
 					<CardMedia
 					component="img"
 					height="200"
@@ -61,7 +61,7 @@ const NewSongs = () => {
 					</CardContent>
 				</Card>
 			))}
-			<Box sx={{ display: 'flex', flexDirection: 'column'}}>
+			<Box sx={{ display: 'flex', flexDirection: 'column', marginLeft: '25px'}}>
 				<Card sx={{ 
 					bgcolor: '#181818', 
 					color: 'white', 

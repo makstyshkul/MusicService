@@ -1,50 +1,50 @@
 import React from 'react';
 import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import ImagineDragons from "./images/imdr.png";
 import Adele from "./images/adele.png";
-import Eminem from "./images/em.png";
-import TheNeighborhood from "./images/neigh.png";
-import Måneskin from "./images/man.png";
+import Drake from "./images/drake.png";
+import HarryStyles from "./images/harry.png";
+import Lana from "./images/lana.png";
+import Week from "./images/week.png";
 
 
 const songs = [
   {
-    title: "Whatever It Takes",
-    artist: "Imagine Dragons",
-    cover: `${ImagineDragons}`,
-  },
-  {
-    title: "Skyfall",
+    title: "Adele 21",
     artist: "Adele",
     cover: `${Adele}`,
+  },
+  {
+    title: "Scorpion",
+    artist: "Drake",
+    cover: `${Drake}`,
 	  },
   {
-    title: "Superman",
-    artist: "Eminem",
-	 cover: `${Eminem}`,
+    title: "Harry's House",
+    artist: "Harry Styles",
+	 cover: `${HarryStyles}`,
   },
   {
-    title: "Softcore",
-    artist: "The Neighborhood",
-	 cover: `${TheNeighborhood}`,
+    title: "Born To Die",
+    artist: "Lana Del Ray",
+	 cover: `${Lana}`,
   },
   {
-    title: "The Lonliest",
-    artist: "Måneskin",
-	 cover: `${Måneskin}`,
+    title: "Beauty Behind the...",
+    artist: "The Weekend",
+	 cover: `${Week}`,
   },
 ];
 
-const WeeklyTopSongs = () => {
+const TopAlbums = () => {
   return (
-    <Box sx={{ bgcolor: '#121212', color: 'white', marginTop: '65px', marginLeft: '435px' }}>
+    <Box sx={{ bgcolor: '#121212', color: 'white', marginTop: '85px', marginLeft: '435px' }}>
       <Typography variant="h3" sx={{ fontWeight: 'bold' }}>
-        Weekly Top <span style={{ color: '#ff69b4' }}>Songs</span>
+        Top <span style={{ color: '#ff69b4' }}>Albums</span>
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: '20px' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: '50px' }}>
 			{songs.map((song) => (
-				<Card key={song.id} sx={{ bgcolor: '#181818', height: '285px', width: '215px', display: 'flex', flexDirection: 'column', '&:not(:first-of-type)': { marginLeft: '50px' }, borderRadius: '5%' }}>
+				<Card key={song.id} sx={{ bgcolor: '#181818', height: '285px', width: '215px', display: 'flex', flexDirection: 'column', '&:not(:first-of-type)': { marginLeft: '45px' } , borderRadius: '5%' }}>
 					<CardMedia
 					component="img"
 					height="200"
@@ -85,4 +85,4 @@ const WeeklyTopSongs = () => {
   );
 };
 
-export default WeeklyTopSongs;
+export default TopAlbums;

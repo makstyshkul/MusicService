@@ -4,6 +4,14 @@ import Main from "./components/main/Main";
 import WeeklyTopSongs from "./components/weeklyTop/WeeklyTopSongs";
 import NewSongs from "./components/newSongs/NewSongs";
 import TrendingSongs from "./components/trendingSongs/TrendingSongs";
+import PopularArtists from "./components/popularArtists/PopularArtists";
+import PopularMusic from "./components/popularMusic/PopularMusic";
+import TopAlbums from "./components/topAlbums/TopAlbums";
+import MoodPlaylist from "./components/moodPlaylist/MoodPlaylist";
+import JoinUs from "./components/joinUs/JoinUs";
+import Footer from "./components/footer/Footer";
+
+
 
 
 
@@ -18,6 +26,12 @@ function App() {
 			 <WeeklyTopSongs />
 			 <NewSongs />
 			 <TrendingSongs />
+			 <PopularArtists />
+			 <PopularMusic />
+			 <TopAlbums />
+			 <MoodPlaylist />
+			 <JoinUs />
+			 <Footer />
         </div>
       </div>
     </>
@@ -25,3 +39,4 @@ function App() {
 }
 
 export default App;
+
