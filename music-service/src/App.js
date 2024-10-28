@@ -1,15 +1,15 @@
 import CssBaseline from '@mui/material/CssBaseline';
-import Sidebar from "./components/sidebar/Sidebar";
-import Main from "./components/main/Main";
-import WeeklyTopSongs from "./components/weeklyTop/WeeklyTopSongs";
-import NewSongs from "./components/newSongs/NewSongs";
-import TrendingSongs from "./components/trendingSongs/TrendingSongs";
-import PopularArtists from "./components/popularArtists/PopularArtists";
-import PopularMusic from "./components/popularMusic/PopularMusic";
-import TopAlbums from "./components/topAlbums/TopAlbums";
-import MoodPlaylist from "./components/moodPlaylist/MoodPlaylist";
-import JoinUs from "./components/joinUs/JoinUs";
-import Footer from "./components/footer/Footer";
+import Sidebar from "./components/mainPage/sidebar/Sidebar";
+import Main from "./components/mainPage/main/Main";
+import WeeklyTopSongs from "./components/mainPage/weeklyTop/WeeklyTopSongs";
+import NewSongs from "./components/mainPage/newSongs/NewSongs";
+import TrendingSongs from "./components/mainPage/trendingSongs/TrendingSongs";
+import PopularArtists from "./components/mainPage/popularArtists/PopularArtists";
+import PopularMusic from "./components/mainPage/popularMusic/PopularMusic";
+import TopAlbums from "./components/mainPage/topAlbums/TopAlbums";
+import MoodPlaylist from "./components/mainPage/moodPlaylist/MoodPlaylist";
+import Footer from "./components/mainPage/footer/Footer";
+import { AuthProvider } from './hooks/AuthHook';
 
 
 
@@ -22,7 +22,7 @@ function App() {
       <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#121212'}}>
         <Sidebar />
         <div style={{  flex: 1 }}>
-          <Main />
+		    <AuthProvider><Main /></AuthProvider>
 			 <WeeklyTopSongs />
 			 <NewSongs />
 			 <TrendingSongs />
@@ -30,7 +30,6 @@ function App() {
 			 <PopularMusic />
 			 <TopAlbums />
 			 <MoodPlaylist />
-			 <JoinUs />
 			 <Footer />
         </div>
       </div>

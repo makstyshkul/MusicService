@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Phone } from '@mui/icons-material';
 
 const Footer = () => {
   return (
-    <Box sx={{ marginLeft: '435px', display: 'flex' }}>
+    <Box sx={{ marginLeft: '435px', marginTop: '125px', display: 'flex' }}>
 	 	<Box sx={{
 			display: 'flex',
 			flexDirection: 'column',
